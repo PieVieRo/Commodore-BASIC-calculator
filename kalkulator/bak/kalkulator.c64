@@ -1,0 +1,36 @@
+1 print chr$(147)
+6 poke 19, 1
+10 print "witaj w kalkulatorze"
+20 print "wybierz pierwsza liczbe"
+30 input A%
+35 print ""
+40 print "wybierz druga liczbe"
+50 input B%
+55 print ""
+60 print "wybierz dzialanie"
+70 print "1. dodawanie"
+80 print "2. odejmowanie"
+90 print "3. mnozenie"
+95 if B%=0 goto 110
+100 print "4. dzielenie"
+110 input P%
+115 print chr$(147)
+120 if P%=4 and B%=0 goto 220
+125 print "wynik to"
+130 if P%=1 goto 140
+131 if P%=2 goto 160
+132 if P%=3 goto 180
+136 if P%=4 goto 200
+140 print A%+B%
+150 goto 240
+160 print A%-B%
+170 goto 240
+180 print A%*B%
+190 goto 240 
+200 print A%/B%
+210 goto 240
+220 print "nie dzieli sie przez zero xd"
+230 goto 10
+240 print "chcesz sprobowac jeszcze raz? (t/n)"
+250 input h$
+260 if h$="t" goto 1
